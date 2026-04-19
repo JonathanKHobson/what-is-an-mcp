@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What is an MCP?</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23f8fbf9%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2723%27 fill=%27none%27 stroke=%27%230f766e%27 stroke-width=%275%27/%3E%3Cpath d=%27M39 14 33 35 15 42l16-14z%27 fill=%27%23d95f43%27/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17211f;
+      --muted: #54615e;
+      --paper: #f8fbf9;
+      --line: #cbd8d3;
+      --teal: #0f766e;
+      --coral: #d95f43;
+      --leaf: #527a39;
+      --gold: #b7791f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    header, main, footer { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 44px 0 18px; display: grid; gap: 18px; }
+    h1 { margin: 0; font-size: 2.35rem; line-height: 1.1; }
+    h2 { margin: 0 0 10px; font-size: 1.35rem; }
+    h3 { margin: 0 0 8px; font-size: 1rem; }
+    p { margin: 0 0 12px; }
+    a { color: var(--teal); font-weight: 700; }
+    .lead { max-width: 780px; color: var(--muted); font-size: 1.08rem; }
+    .card { border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 8px; padding: 20px; background: #fff; margin: 0 0 20px; }
+    .notice { border-left-color: var(--gold); }
+    .risk { border-left-color: var(--coral); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .button {
+      display: inline-block;
+      margin: 6px 8px 0 0;
+      padding: 10px 13px;
+      border-radius: 8px;
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .button.secondary { background: var(--coral); }
+    .tag { display: inline-block; color: #fff; background: var(--teal); border-radius: 8px; padding: 4px 8px; font-size: .85rem; }
+    section { padding: 16px 0; }
+    img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    figure { margin: 0 0 20px; }
+    figcaption { color: var(--muted); font-size: .9rem; margin-top: 8px; }
+    ol, ul { padding-left: 22px; }
+    footer { padding: 28px 0 44px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="tag">Plain-language MCP explainer</span>
+    <h1>What is an MCP?</h1>
+    <p class="lead">MCP stands for <strong>Model Context Protocol</strong>. It is a shared way for an AI assistant to connect to tools, files, and structured knowledge without custom wiring every time.</p>
+    <p><a class="button" href="https://jonathankhobson.github.io/critical-compass/">Back to Critical Compass downloads</a></p>
+  </header>
+  <main>
+    <section>
+      <figure>
+        <picture><source srcset="mcp-infographic/full.webp" type="image/webp"><img src="mcp-infographic/full.jpg" alt="Full infographic explaining MCP as giving AI the keys to the office" width="1600" height="893" loading="eager" decoding="async" fetchpriority="high"></picture>
+        <figcaption>The whole picture: MCP helps AI move from isolated answers to connected action.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card">
+      <h2>The Short Version</h2>
+      <p>Think of an MCP as giving AI a <strong>toolbox</strong> and a <strong>filing cabinet</strong> in the same room. The toolbox is what the AI can do. The filing cabinet is what the AI can find.</p>
+      <p>Depending on the app, you may see the same idea called an <strong>MCP</strong>, <strong>connector</strong>, or <strong>extension</strong>. Those words can mean slightly different things in different products, but here they all point to the same basic idea: a trusted connection between an AI assistant and a useful local or remote capability.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Toolbox</h2>
+        <p>The toolbox side lets AI take actions through approved tools. That might mean creating a PDF, searching an index, summarizing a file, checking a local database, or preparing a report.</p>
+      </div>
+      <div class="card">
+        <h2>Filing Cabinet</h2>
+        <p>The filing cabinet side gives AI organized information to look through. Instead of guessing from a giant pile of text, it can move from category to subcategory to record to answer.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. Before MCP: Isolated Brilliance</h2>
+      <figure>
+        <picture><source srcset="mcp-infographic/1.webp" type="image/webp"><img src="mcp-infographic/1.jpg" alt="AI isolated from tools and documents before MCP" width="1048" height="600" loading="lazy" decoding="async"></picture>
+      </figure>
+      <p>Before MCP, every connection between an AI assistant and a tool often needed custom code. That made useful integrations expensive, fragile, and hard for regular people to install or trust.</p>
+    </section>
+
+    <section class="card">
+      <h2>2. MCP Creates a Shared Room</h2>
+      <figure>
+        <picture><source srcset="mcp-infographic/2.webp" type="image/webp"><img src="mcp-infographic/2.jpg" alt="MCP as AI toolbox and filing cabinet connected to records and tools" width="1400" height="522" loading="lazy" decoding="async"></picture>
+      </figure>
+      <p>An MCP creates a shared room where the AI can see what tools and information are available. The AI still needs permission and a clear task, but it no longer has to guess where everything lives.</p>
+    </section>
+
+    <section class="card">
+      <h2>3. Precise Navigation, Not Guessing</h2>
+      <figure>
+        <picture><source srcset="mcp-infographic/3.webp" type="image/webp"><img src="mcp-infographic/3.jpg" alt="AI moving from category to subcategory to record to answer" width="1130" height="712" loading="lazy" decoding="async"></picture>
+      </figure>
+      <p>A good MCP helps the AI narrow the search. It can move from a broad category to a specific record, like a librarian finding the right shelf, folder, page, and answer.</p>
+    </section>
+
+    <section class="card">
+      <h2>4. Real-World Power</h2>
+      <figure>
+        <picture><source srcset="mcp-infographic/4.webp" type="image/webp"><img src="mcp-infographic/4.jpg" alt="MCP examples including spreadsheets, meeting agendas, and complex reports" width="1400" height="626" loading="lazy" decoding="async"></picture>
+      </figure>
+      <p>That connection lets AI do practical work: summarize spreadsheets, find meeting details, review reports, create tasks, generate documents, or use a specialized tool like Critical Compass.</p>
+    </section>
+
+    <section id="mcp-risks" class="card risk">
+      <h2>MCP Risks: What to Watch For</h2>
+      <p>MCPs can be local or remote, and they are powerful because they can give an AI access to tools or selected information. That is why you should treat an unknown MCP like any downloaded software or connected service.</p>
+      <p>Possible risks include malicious code, unexpected file access, hidden external API calls, broad permissions, or prompt injection inside connected files and tools. Install MCPs only from trusted sources, and review what they can access before using them on private or sensitive work.</p>
+      <ul>
+        <li>Check whether the MCP runs locally, connects to a remote server, or does both.</li>
+        <li>Look for API keys, paid services, broad file access, or unexpected network calls.</li>
+        <li>Ask Claude, Codex, or a trusted technical reviewer to inspect the files if you are unsure.</li>
+        <li>Prefer clear, narrow tools that explain what they access and why.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Diving Deeper: What files might I see inside an MCP?</h2>
+      <p>An MCP package can look strange if you are not used to developer files. These are common file types and what they usually mean:</p>
+      <ul>
+        <li><strong><code>.json</code></strong>: settings, manifests, tool definitions, or structured data.</li>
+        <li><strong><code>.yaml</code> / <code>.yml</code></strong>: configuration written in a human-readable format.</li>
+        <li><strong><code>.py</code>, <code>.ts</code>, <code>.js</code></strong>: code that may run MCP tools.</li>
+        <li><strong><code>.md</code></strong>: instructions, documentation, prompts, or reference text.</li>
+        <li><strong><code>.csv</code></strong>: spreadsheet-like table data.</li>
+        <li><strong><code>.sql</code>, <code>.sqlite</code>, <code>.db</code></strong>: database queries or bundled local databases and indexes.</li>
+        <li><strong><code>.env</code></strong>: secret or machine-specific settings. Public bundles should not include these.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Quick FAQ</h2>
+      <h3>Can an MCP be local or remote?</h3>
+      <p>Yes. Some MCPs run on your computer through stdio. Others connect over HTTP to a remote server. Some products support both patterns.</p>
+      <h3>Is an MCP the same as a plugin or skill?</h3>
+      <p>No. An MCP is the tool-and-context connection. A plugin can bundle MCPs, skills, and other pieces together. A skill is usually instructions or reference material the AI can read.</p>
+      <h3>What should I check before installing one?</h3>
+      <p>Check the source, what files it can access, whether it makes network calls, whether it needs secrets or API keys, and whether sensitive actions require your confirmation.</p>
+      <p>For technical readers, the official MCP docs describe JSON/schema-based messages, tools, resources, HTTP authorization, and stdio transport behavior: <a href="https://modelcontextprotocol.io/specification/draft/basic">MCP basics</a> and <a href="https://modelcontextprotocol.io/specification/draft/server/tools">MCP tools</a>.</p>
+    </section>
+
+    <section class="card notice">
+      <h2>How This Applies to Critical Compass</h2>
+      <p>Critical Compass uses the MCP idea to give AI a critical-thinking toolbox and a bundled filing cabinet of reasoning resources. It is designed for pressure-testing writing before publication or submission, not for background scanning or broad access to your computer.</p>
+      <p><a class="button secondary" href="https://jonathankhobson.github.io/critical-compass/">Return to Downloads</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>Educational support for Critical Compass. This page does not change the install files or create a new release.</p>
+  </footer>
+</body>
+</html>
