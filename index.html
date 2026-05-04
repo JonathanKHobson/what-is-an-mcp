@@ -18,6 +18,7 @@
       --gold: #b7791f;
     }
     * { box-sizing: border-box; }
+    html { max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -25,6 +26,8 @@
       color: var(--ink);
       line-height: 1.55;
       letter-spacing: 0;
+      max-width: 100%;
+      overflow-x: hidden;
     }
     header, main, footer { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
     header { padding: 44px 0 18px; display: grid; gap: 18px; }
@@ -32,15 +35,24 @@
     h2 { margin: 0 0 10px; font-size: 1.35rem; }
     h3 { margin: 0 0 8px; font-size: 1rem; }
     p { margin: 0 0 12px; }
-    a { color: var(--teal); font-weight: 700; }
+    a { color: var(--teal); font-weight: 700; overflow-wrap: anywhere; }
+    a:focus-visible,
+    button:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(217, 95, 67, 0.35);
+      outline-offset: 3px;
+    }
     .lead { max-width: 780px; color: var(--muted); font-size: 1.08rem; }
-    .card { border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 8px; padding: 20px; background: #fff; margin: 0 0 20px; }
+    .card { border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 8px; padding: 20px; background: #fff; margin: 0 0 20px; min-width: 0; max-width: 100%; }
     .notice { border-left-color: var(--gold); }
     .risk { border-left-color: var(--coral); }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .button {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       margin: 6px 8px 0 0;
+      min-height: 44px;
       padding: 10px 13px;
       border-radius: 8px;
       background: var(--teal);
@@ -50,12 +62,16 @@
       border: 0;
       cursor: pointer;
       font: inherit;
+      text-align: center;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
-    .button.secondary { background: var(--coral); }
+    .button.secondary { background: var(--teal); }
     .button.ghost { background: transparent; color: var(--teal); border: 1px solid var(--teal); }
     .tag { display: inline-block; color: #fff; background: var(--teal); border-radius: 8px; padding: 4px 8px; font-size: .85rem; }
     section { padding: 16px 0; }
-    img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
     figure { margin: 0 0 20px; }
     figcaption { color: var(--muted); font-size: .9rem; margin-top: 8px; }
     ol, ul { padding-left: 22px; }
@@ -71,9 +87,16 @@
       font: 0.94rem/1.45 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }
     .small { color: var(--muted); font-size: .92rem; }
-    .download-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 12px; }
+    .download-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 12px; min-width: 0; max-width: 100%; }
     .checksum { overflow-wrap: anywhere; }
     footer { padding: 28px 0 44px; color: var(--muted); }
+    @media (max-width: 560px) {
+      header, main, footer { width: min(100% - 24px, 1040px); }
+      header { padding-top: 32px; }
+      h1 { font-size: 2rem; }
+      .button { width: 100%; margin-right: 0; }
+      .download-row { display: grid; grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -89,6 +112,17 @@
       <h2>The Short Version</h2>
       <p>Think of an MCP as giving AI a <strong>toolbox</strong> and a <strong>filing cabinet</strong> in the same room. The toolbox is what the AI can do. The filing cabinet is what the AI can find.</p>
       <p>Depending on the app, you may see the same idea called an <strong>MCP</strong>, <strong>connector</strong>, or <strong>extension</strong>. Those words can mean slightly different things in different products, but here they all point to the same basic idea: a trusted connection between an AI assistant and a useful local or remote capability.</p>
+    </section>
+
+    <section class="card notice">
+      <h2>Compass Recovery Links</h2>
+      <p>If you came here from an install page, these links take you back to the public Compass pages.</p>
+      <p>
+        <a class="button" href="https://jonathankhobson.github.io/compass-suite/">Compass Suite</a>
+        <a class="button ghost" href="https://jonathankhobson.github.io/critical-compass/">Critical Compass</a>
+        <a class="button ghost" href="https://jonathankhobson.github.io/prompt-compass/">Prompt Compass</a>
+        <a class="button ghost" href="https://jonathankhobson.github.io/ux-heuristic-compass/">UX Heuristics Compass</a>
+      </p>
     </section>
 
     <section class="grid">
