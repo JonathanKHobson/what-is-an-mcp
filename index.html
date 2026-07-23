@@ -1,17 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>What Is an MCP?</title>
+  <title>What Is an MCP? — Working Tools</title>
   <meta name="description" content="A plain-language guide to Model Context Protocol: what MCPs are, what they do, and how to evaluate one before installing it.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23f8fbf9%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2723%27 fill=%27none%27 stroke=%27%230f766e%27 stroke-width=%275%27/%3E%3Cpath d=%27M39 14 33 35 15 42l16-14z%27 fill=%27%23d95f43%27/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap">
+  <link rel="icon" href="assets/working-tools-mark.svg" type="image/svg+xml">
   <style>
-    /* compass-public-visual-system: uxhc-v1 */
-    :root { color-scheme: light; --bg: #f7faf7; --paper: #ffffff; --ink: #17211f; --muted: #5f6f6a; --teal: #0f766e; --teal-dark: #0b5f59; --teal-lt: rgba(15,118,110,0.08); --coral: #d95f43; --leaf: #527a39; --gold: #d99c2b; --line: #d9e5df; --soft: #eef6f1; --danger: #9f2d20; --shadow: 0 2px 8px rgba(23,33,31,0.06); --shadow-md: 0 6px 20px rgba(23,33,31,0.10); --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; --font-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; --container: min(1120px, calc(100% - 32px)); --radius: 8px; --site-nav-h: 52px; }
+    /* working-tools-network-v2 */
+    :root { color-scheme: light; --bg: #f7faf7; --paper: #ffffff; --ink: #17211f; --muted: #5f6f6a; --teal: #0f766e; --teal-dark: #0b5f59; --teal-lt: rgba(15,118,110,0.08); --coral: #d95f43; --leaf: #527a39; --gold: #d99c2b; --line: #d9e5df; --soft: #eef6f1; --danger: #9f2d20; --shadow: 0 2px 8px rgba(23,33,31,0.06); --shadow-md: 0 6px 20px rgba(23,33,31,0.10); --font-display: Georgia, 'Times New Roman', serif; --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; --container: min(1120px, calc(100% - 32px)); --radius: 8px; --site-nav-h: 52px; }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.62; color: var(--ink); background: linear-gradient(180deg,rgba(15,118,110,0.07) 0%,transparent 400px),var(--bg); overflow-x: hidden; }
@@ -87,24 +84,23 @@
     @media (max-width: 720px) { .site-nav { height: var(--site-nav-h); overflow: visible; } .site-nav-inner { position: relative; min-height: var(--site-nav-h); } .site-nav-toggle { display: inline-flex; } .site-nav-sep { display: none; } .site-nav-links { flex: none; width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow-md); padding: 6px; } .js-enabled .site-nav-links { position: absolute; top: calc(100% + 6px); left: 0; right: 0; display: none; overflow: visible; } .js-enabled .site-nav-links.is-open { display: grid; } html:not(.js-enabled) .site-nav { height: auto; } html:not(.js-enabled) .site-nav-inner { flex-wrap: wrap; padding: 6px 0; } html:not(.js-enabled) .site-nav-toggle { display: none; } html:not(.js-enabled) .site-nav-links { display: grid; flex-basis: 100%; } .site-nav-link { display: flex; align-items: center; width: 100%; min-height: 44px; white-space: normal; padding: 10px 12px; } .hero { padding: 36px 0 24px; } .hero-lockup { gap: 14px; } .hero-badge { width: 52px; height: 52px; } .suite-footer-grid { grid-template-columns: 1fr; gap: 12px; } }
     @media (max-width: 480px) { :root { --container: min(100%, calc(100% - 20px)); } .hero h1 { font-size: 1.75rem; } .hero-badge { width: 44px; height: 44px; } }
   </style>
+  <link rel="stylesheet" href="assets/network.css">
 </head>
 <body>
 
   <div id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
 
-  <nav class="site-nav" aria-label="Compass network">
+  <a class="skip-link" href="#short-version">Skip to the guide</a>
+  <nav class="site-nav" aria-label="Working Tools network">
     <div class="site-nav-inner">
-      <a class="site-nav-brand" href="https://jonathankhobson.github.io/compass-suite/">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23f8fbf9'/%3E%3Ccircle cx='32' cy='32' r='23' fill='none' stroke='%230f766e' stroke-width='5'/%3E%3Cpath d='M40 12 34 34 52 46 30 39z' fill='%23d95f43'/%3E%3Cpath d='M24 52 30 30 12 18 34 25z' fill='%23527a39'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%2317211f'/%3E%3C/svg%3E" alt="">
-        <span>Compass Suite</span>
-      </a>
+      <a class="site-nav-brand" href="https://jonathankhobson.github.io/compass-suite/"><span>Working Tools</span></a>
       <div class="site-nav-sep" aria-hidden="true"></div>
       <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-menu">
         <span class="site-nav-toggle-icon" aria-hidden="true"></span>
         <span>Menu</span>
       </button>
       <div class="site-nav-links" id="site-nav-menu">
-        <a class="site-nav-link" href="https://jonathankhobson.github.io/compass-suite/">Suite</a>
+        <a class="site-nav-link" href="https://jonathankhobson.github.io/compass-suite/">Library</a>
         <a class="site-nav-link" href="https://jonathankhobson.github.io/critical-compass/">Critical Compass</a>
         <a class="site-nav-link" href="https://jonathankhobson.github.io/prompt-compass/">Prompt Compass</a>
         <a class="site-nav-link" href="https://jonathankhobson.github.io/ux-heuristic-compass/">UX Heuristics</a>
@@ -116,7 +112,6 @@
 
   <header class="hero" aria-label="MCP Basics">
     <div class="hero-lockup">
-      <img class="hero-badge" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='16' fill='%23f8fbf9'/%3E%3Ccircle cx='60' cy='60' r='44' fill='none' stroke='%230f766e' stroke-width='8'/%3E%3Cpath d='M75 22 63 66 30 80 50 54z' fill='%23d95f43'/%3E%3C/svg%3E" alt="MCP Basics badge">
       <div class="hero-id">
         <span class="hero-eyebrow">MCP Basics · Plain-language guide</span>
         <h1>What is an MCP?</h1>
@@ -124,7 +119,8 @@
     </div>
     <p class="hero-lead">MCP stands for <strong>Model Context Protocol</strong> — a shared way for an AI assistant to connect to tools, files, and structured knowledge without custom wiring every time.</p>
     <p class="hero-lead">New to the wider AI landscape first? Start with <a href="https://jonathankhobson.github.io/shareables/s/understanding-ai-2026/">AI Basics</a> for models, products, interfaces, and agents, then come back here for MCPs.</p>
-    <p class="hero-actions"><a class="button ghost" href="https://jonathankhobson.github.io/compass-suite/">Back to Compass Suite</a></p>
+    <p class="hero-actions"><a class="button" href="#short-version">Read the short version</a><a class="button ghost" href="#safe-install-review">Get the safety skill</a></p>
+    <aside class="work-specimen" aria-label="MCP permission flow specimen"><div class="specimen-top"><span>Connection check / 04</span><span>Before install</span></div><h2>A connector is a permission path.</h2><ol class="specimen-list"><li><span>01</span><strong>You name the task</strong></li><li><span>02</span><strong>The host offers an approved tool</strong></li><li><span>03</span><strong>The tool reaches only its granted scope</strong></li><li><span>04</span><strong>You inspect the result</strong></li></ol><div class="specimen-foot"><span>Access visible</span><span>Result reviewable</span></div></aside>
   </header>
   <main>
     <section id="short-version" class="card">
@@ -134,10 +130,10 @@
     </section>
 
     <section class="card notice">
-      <h2>Compass Recovery Links</h2>
-      <p>If you came here from an install page, these links take you back to the public Compass pages.</p>
+      <h2>Working Tools recovery links</h2>
+      <p>If you came here from an install page, these links take you back to the public downloads and library.</p>
       <p>
-        <a class="button" href="https://jonathankhobson.github.io/compass-suite/">Compass Suite</a>
+        <a class="button" href="https://jonathankhobson.github.io/compass-suite/">Working Tools</a>
         <a class="button ghost" href="https://jonathankhobson.github.io/critical-compass/">Critical Compass</a>
         <a class="button ghost" href="https://jonathankhobson.github.io/prompt-compass/">Prompt Compass</a>
         <a class="button ghost" href="https://jonathankhobson.github.io/ux-heuristic-compass/">UX Heuristics Compass</a>
@@ -209,7 +205,7 @@
     <section id="safe-install-review" class="card notice">
       <h2>Free Safety Check Skill and Prompt</h2>
       <p><strong>Safe Install Review</strong> is a small reusable skill for asking an AI assistant to inspect an app, MCP, plugin, package, command, repo, or checksum before you install or run it. It is a practical risk review, not a formal security audit or guarantee.</p>
-      <div class="download-row" aria-label="Safe Install Review downloads">
+      <div class="download-row" role="group" aria-label="Safe Install Review downloads">
         <a class="button" href="downloads/safe-install-review.skill" download>Download .skill</a>
         <a class="button secondary" href="downloads/safe-install-review.zip" download>Download .zip</a>
       </div>
@@ -217,7 +213,7 @@
       <h3>Copy-and-paste security check prompt</h3>
       <p>Use this prompt with Claude, Codex, ChatGPT, or another assistant before running a download, install command, package, repo, plugin, or MCP.</p>
       <p><button class="button ghost" type="button" data-copy-target="security-check-prompt">Copy security check prompt</button></p>
-      <textarea id="security-check-prompt" readonly>You are my careful software safety reviewer. Before I download, install, run, wire, copy, or adapt this app, MCP, plugin, package, script, repo, command, checksum, or release artifact, inspect it and give me an evidence-based risk verdict.
+      <textarea id="security-check-prompt" aria-label="Safe install review prompt" readonly>You are my careful software safety reviewer. Before I download, install, run, wire, copy, or adapt this app, MCP, plugin, package, script, repo, command, checksum, or release artifact, inspect it and give me an evidence-based risk verdict.
 
 Artifact to review:
 [Paste the URL, repo, install command, package name, manifest, checksum, file list, release page, or install instructions here.]
@@ -297,22 +293,22 @@ Final Recommendation:
     </section>
 
     <section class="card notice">
-      <h2>How This Applies to the Compass Suite</h2>
-      <p>The Compass Suite uses the MCP idea to give AI focused local toolboxes and bundled filing cabinets for specific kinds of work. Each Compass keeps its own scope: Critical Compass audits claims and reasoning, Prompt Compass improves prompts, UX Heuristics Compass reviews interfaces, and future Compasses add their own bounded capabilities.</p>
-      <p><a class="button secondary" href="https://jonathankhobson.github.io/compass-suite/">Return to Compass Suite</a></p>
+      <h2>How this applies to Working Tools</h2>
+      <p>Some public Working Tools downloads use MCP to give an AI a focused local toolbox. Each product keeps its own scope: Critical Compass audits claims and reasoning, Prompt Compass improves prompts, and UX Heuristics Compass reviews interfaces. The public library also includes field guides and prompt-only skills that do not require a connector.</p>
+      <p><a class="button secondary" href="https://jonathankhobson.github.io/compass-suite/">Return to Working Tools</a></p>
     </section>
   </main>
   <footer class="suite-footer" role="contentinfo">
     <div class="suite-footer-inner">
     <div class="suite-footer-card">
-      <p class="suite-footer-note">Educational support for the Compass Suite. This page does not change install files or create a new release.</p>
-      <p class="suite-footer-heading">Compass Suite is created and maintained by Jonathan Kyle Hobson.</p>
-      <p class="suite-footer-purpose">Local-first AI tools for reasoning, prompt work, UX review, and evidence-bound workflows.</p>
-      <nav class="suite-footer-grid" aria-label="Compass network footer">
+      <p class="suite-footer-note">A public guide and safety-skill download from the Working Tools library.</p>
+      <p class="suite-footer-heading">MCP Basics is part of Working Tools by J. Kyle Hobson.</p>
+      <p class="suite-footer-purpose">Public resources for writing, evidence, design, building, career work, teaching, and games with AI.</p>
+      <nav class="suite-footer-grid" aria-label="Working Tools network footer">
         <section class="suite-footer-group" aria-labelledby="footer-start-here">
           <h2 id="footer-start-here">Start Here</h2>
           <div class="suite-footer-links">
-            <a href="https://jonathankhobson.github.io/compass-suite/">Compass Suite Home</a>
+            <a href="https://jonathankhobson.github.io/compass-suite/">Working Tools Library</a>
             <a href="https://jonathankhobson.github.io/shareables/s/understanding-ai-2026/">AI Basics</a>
             <a href="https://jonathankhobson.github.io/what-is-an-mcp/">MCP Basics</a>
             <a href="https://jonathankhobson.github.io/compass-suite/#install">Install Guide</a>
@@ -335,7 +331,7 @@ Final Recommendation:
           </div>
         </section>
       </nav>
-      <p class="suite-footer-legal">&copy; 2026 Jonathan Kyle Hobson. Code AGPL-3.0-only; docs, prompts, skills, and methodology CC BY-SA 4.0 unless otherwise noted. Compass names, logos, author photo, and official trade dress reserved.</p>
+      <p class="suite-footer-legal">&copy; 2026 Jonathan Kyle Hobson. Code AGPL-3.0-only; docs, prompts, skills, and methodology CC BY-SA 4.0 unless otherwise noted. Product names and official brand assets are reserved.</p>
     </div>
     </div>
   </footer>
