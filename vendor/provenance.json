@@ -1,0 +1,37 @@
+[
+  {
+    "path": "vendor/compass-suite/assets/css/network-frame.css",
+    "source": "https://raw.githubusercontent.com/JonathanKHobson/compass-suite/5b8cc77a1a6b05dc1adb81279d32d3b20e20a286/assets/css/network-frame.css",
+    "source_commit": "5b8cc77a1a6b05dc1adb81279d32d3b20e20a286",
+    "sha256": "666da937f1899846639c8f1cb0d69d41b1bfa36fd945c2d70686817a838f1471",
+    "bytes": 4898
+  },
+  {
+    "path": "vendor/compass-suite/assets/js/network-frame.js",
+    "source": "https://raw.githubusercontent.com/JonathanKHobson/compass-suite/5b8cc77a1a6b05dc1adb81279d32d3b20e20a286/assets/js/network-frame.js",
+    "source_commit": "5b8cc77a1a6b05dc1adb81279d32d3b20e20a286",
+    "sha256": "54ac16fe104e464c525c80f4353c482a304d1bbef72c36a885d4022ccc413032",
+    "bytes": 4882
+  },
+  {
+    "path": "vendor/compass-suite/assets/brand/working-tools-mark-64.png",
+    "source": "https://raw.githubusercontent.com/JonathanKHobson/compass-suite/5b8cc77a1a6b05dc1adb81279d32d3b20e20a286/assets/brand/working-tools-mark-64.png",
+    "source_commit": "5b8cc77a1a6b05dc1adb81279d32d3b20e20a286",
+    "sha256": "01d488eaf328032052a743a78f76231e4671700606771bb9cd2bdbe98ff14b69",
+    "bytes": 3646
+  },
+  {
+    "path": "vendor/compass-suite/assets/brand/working-tools-favicon-32.png",
+    "source": "https://raw.githubusercontent.com/JonathanKHobson/compass-suite/5b8cc77a1a6b05dc1adb81279d32d3b20e20a286/assets/brand/working-tools-favicon-32.png",
+    "source_commit": "5b8cc77a1a6b05dc1adb81279d32d3b20e20a286",
+    "sha256": "22c73643657bad6add7ae39e0ea6628a83e182d18636e1d83a8fc803773f43c7",
+    "bytes": 1264
+  },
+  {
+    "path": "vendor/compass-suite/assets/brand/working-tools-icon-180.png",
+    "source": "https://raw.githubusercontent.com/JonathanKHobson/compass-suite/5b8cc77a1a6b05dc1adb81279d32d3b20e20a286/assets/brand/working-tools-icon-180.png",
+    "source_commit": "5b8cc77a1a6b05dc1adb81279d32d3b20e20a286",
+    "sha256": "3bd769418230388892b10f845ca1f6a0e1db42a9ec7075b6c595736bef0b7100",
+    "bytes": 13342
+  }
+]

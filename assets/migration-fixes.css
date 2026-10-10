@@ -1,0 +1,4 @@
+/* Scope: repair overlapping lead paragraphs; retain incumbent visual system. */
+.hero-copy { grid-column: 1; grid-row: 2; display: grid; gap: 1rem; }
+.hero-copy > .hero-lead { grid-column: auto; grid-row: auto; }
+@media (max-width: 900px) { .hero-copy { grid-row: auto; } }
